@@ -3,6 +3,12 @@
 
 import random
 
+def mostrar_bienvenida():
+    print("=" * 40)
+    print("¡Bienvenido al juego de adivinar el número secreto!")
+    print("=" * 40)
+    
+
 def jugar():
     numero_secreto = random.randint(1, 100)
     intentos = 0
