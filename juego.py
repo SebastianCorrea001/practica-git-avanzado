@@ -1,5 +1,5 @@
-""" Juego de adivinar el número secreto entre 1 y 100. """
-""" Prueba """
+""" Juego de adivinar el número secreto entre 1 y 100. Final"""
+""" Prueba - Sebastian Correa - Autor"""
 
 import random
 
@@ -22,6 +22,8 @@ def mostrar_resultado_final(gano, intentos, numero_secreto):
         print(f"¡Felicidades! Has adivinado el número secreto {numero_secreto} en {intentos} intentos.")
     else:
         print(f"Se acabaron los intentos. El número secreto era {numero_secreto}. ¡Mejor suerte la próxima vez!")
+
+#Funcion para reiniciar el juego 
 
 def quiere_jugar_de_nuevo():
     respuesta = input("¿Quieres jugar de nuevo? (s/n): ").lower()
