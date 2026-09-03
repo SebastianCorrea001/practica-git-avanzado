@@ -6,7 +6,7 @@ import random
 def jugar():
     numero_secreto = random.randint(1, 100)
     intentos = 0
-    max_intentos = 10
+    max_intentos = 12
     print("¡Bienvenido al juego de adivina el numero: !")
     print("Elige un numero entre 1 y 100.")
 
