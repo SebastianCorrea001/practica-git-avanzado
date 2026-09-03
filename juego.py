@@ -7,7 +7,10 @@ def mostrar_bienvenida():
     print("=" * 40)
     print("¡Bienvenido al juego de adivinar el número secreto!")
     print("=" * 40)
-    
+
+def pedir_intento():
+    return int(input("Introduce tu intento (entre 1 y 100): "))
+
 
 def jugar():
     numero_secreto = random.randint(1, 100)
