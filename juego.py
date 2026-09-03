@@ -17,6 +17,16 @@ def dar_pista(intento, numero_secreto):
     else:
         print("El número secreto es menor. Intenta de nuevo.")
 
+def mostrar_resultado_final(gano, intentos, numero_secreto):
+    if gano:
+        print(f"¡Felicidades! Has adivinado el número secreto {numero_secreto} en {intentos} intentos.")
+    else:
+        print(f"Se acabaron los intentos. El número secreto era {numero_secreto}. ¡Mejor suerte la próxima vez!")
+
+def quiere_jugar_de_nuevo():
+    respuesta = input("¿Quieres jugar de nuevo? (s/n): ").lower()
+    return respuesta == 's'
+
 def jugar():
     numero_secreto = random.randint(1, 100)
     intentos = 0
@@ -29,12 +39,12 @@ def jugar():
         intentos += 1
 
         if intento == numero_secreto:
-            print(f"¡Felicidades! Has adivinado el número secreto {numero_secreto} en {intentos} intentos.")
+            mostrar_resultado_final(True, intentos, numero_secreto)
             break
         else:
             print(dar_pista(intento, numero_secreto))
     else:
-        print(f"Se acabaron los intentos. El número secreto era {numero_secreto}. ¡Mejor suerte la próxima vez!")
+        mostrar_resultado_final(False, intentos, numero_secreto)
 
 if __name__ == "__main__":
     jugar()
